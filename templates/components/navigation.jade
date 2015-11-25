@@ -1,0 +1,6 @@
+mixin navigation()
+  .c-navigation
+    nav.c-navigation__site
+      each item in navLinks
+        li.c-navigation__item
+          a.c-navigation__label(href=item.href, title='Ir para #{item.label}') #{item.label}

@@ -1,0 +1,15 @@
+.c-navigation
+  padding 1rem
+
+  &__site
+    display flex
+
+  &__item
+    font-size rem(18)
+
+    &:not(:first-child):before
+      content '|'
+      padding 0 0.5rem
+
+  &__label
+    text-transform uppercase

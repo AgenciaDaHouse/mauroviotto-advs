@@ -11,7 +11,7 @@ exports.initLocals = function(req, res, next) {
     { label: 'Escritório', href: '/#escritorio' },
     { label: 'Advogados - Equipe', href: '/#advogados-equipe' },
     { label: 'Áreas de Atuação', href: '/#areas-de-atuação' },
-    { label: 'Contato', href: '/#contato' },
+    { label: 'Contato', href: '/#contato' }
   ];
 
   locals.user = req.user;
