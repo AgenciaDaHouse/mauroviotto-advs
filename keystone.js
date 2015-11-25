@@ -3,10 +3,11 @@ require('dotenv').load();
 // Require keystone
 var keystone = require('keystone');
 var ENV = keystone.get('env');
+var config = require('./config');
 
 keystone.init({
-  'name': 'Mauro Viotto Advogados',
-  'brand': 'Mauro Viotto Advogados',
+  'name': config.APP_NAME,
+  'brand': config.APP_NAME,
 
   'static': 'public',
   'favicon': 'public/favicon.ico',
@@ -26,6 +27,7 @@ keystone.import('models');
 keystone.set('locals', {
   _: require('underscore'),
   env: ENV,
+  config: config,
   utils: keystone.utils,
   editable: keystone.content.editable
 });

@@ -17,6 +17,6 @@ html
     if user && user.canAccessKeystone
       link(href='/keystone/styles/content/editor.min.css', rel='stylesheet')
 
-  body.u-layout
-      +flash-messages(messages)
-      block content
+  body
+    +flash-messages(messages)
+    block content

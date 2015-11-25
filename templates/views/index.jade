@@ -2,8 +2,12 @@
 extends ../layouts/default
 
 //- dependencies
+include ../components/footer
 include ../components/header
 
 //- markup
 block content
-  +header()
+  .u-layout
+    +header()
+    .u-layout__content
+    +footer()
