@@ -1,0 +1,21 @@
+//- dependencies
+include ../mixins/flash-messages
+
+doctype html
+html
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title= title || 'Mauro Viotto Advogados'
+    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+    link(href='/css/site.css', rel='stylesheet')
+    link(href='//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic', rel='stylesheet')
+
+    if user && user.canAccessKeystone
+      link(href='/keystone/styles/content/editor.min.css', rel='stylesheet')
+
+  body.u-layout
+      +flash-messages(messages)
+      block content
