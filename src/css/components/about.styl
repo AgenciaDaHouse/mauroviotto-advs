@@ -2,6 +2,27 @@
   background $dark-gray
   color $white
   padding 5rem 0
+  position relative
+
+  &:before
+    $s = 36px
+    border-left $s solid transparent
+    border-right @border-left
+    border-top $s solid $white
+    content ''
+    display block
+    height: 0
+    left 50%
+    margin-left -($s)
+    position absolute
+    top 0
+    width: 0
 
   &__text
     font-style italic
+
+  &__items
+    grid()
+
+    > .c-about__item
+      grid-cell()
