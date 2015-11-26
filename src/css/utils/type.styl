@@ -1,0 +1,27 @@
+.u-type
+
+  &-heading
+    font-size rem(24)
+    font-weight 700
+    letter-spacing 0.15rem
+    margin 0 0 3rem 0
+    padding-bottom 1.5rem
+    position relative
+    text-align center
+    text-transform uppercase
+
+    &--main
+      margin-bottom 5rem
+
+    &:after
+      $w = 50px
+      border-top 2px solid
+      bottom 0
+      content ''
+      left 50%
+      margin-left -($w/2)
+      position absolute
+      width $w
+
+  &-text
+    line-height 1.4

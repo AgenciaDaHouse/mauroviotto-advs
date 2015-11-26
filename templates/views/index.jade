@@ -2,6 +2,8 @@
 extends ../layouts/default
 
 //- dependencies
+include ../components/about
+include ../components/banner
 include ../components/footer
 include ../components/header
 
@@ -9,5 +11,9 @@ include ../components/header
 block content
   .u-layout
     +header()
+
     .u-layout__content
+      +banner()
+      +about()
+
     +footer()
