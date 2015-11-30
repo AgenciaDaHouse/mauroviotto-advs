@@ -1,0 +1,49 @@
+.c-team
+  $margin = 3rem
+
+  background #ccc
+  padding 7rem 0 6rem
+  position relative
+
+  &:before
+    triangle($dark-gray)
+
+  &__items
+    grid($gutter-size * 6)
+    margin-bottom 4rem
+
+  &__item
+    grid-cell(0 0 50%, $gutter-size * 6)
+    display flex
+
+  &__box
+    background $white
+    flex 1
+    margin $margin
+    padding 3rem
+    text-align center
+
+  &__text
+    color $medium-gray
+    font-size rem(14)
+    line-height 1.8
+    padding 0 1.5rem
+    text-decoration underline
+
+  &__footer
+    background rgba(255,255,255,0.5)
+    letter-spacing 0.15rem
+    margin $margin
+    padding $margin + 1
+    text-align center
+
+  &__heading
+    color $dark-gray
+    margin-bottom 0.5rem
+    text-transform uppercase
+
+  &__info
+    color $medium-gray
+
+    a
+      text-decoration underline

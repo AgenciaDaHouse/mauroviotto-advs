@@ -1,0 +1,20 @@
+//- dependencies
+include ./avatar
+
+mixin team()
+  section.c-team
+    .h-limiter
+      each item, key in members
+        - specialRole = String(roles.advogado._id) === key
+        h2.u-type-heading.u-type-heading--main #{ specialRole ? 'Advogados' : 'Equipe' }
+        ul.c-team__items
+          each data in item
+            li.c-team__item
+              .c-team__box
+                +avatar(data)
+                p.c-team__text #{data.info}
+
+      footer.c-team__footer
+        h3.c-team__heading Trabalhe Conosco:
+        p.c-team__info Quer fazer parte da nossa equipe? Envie seu currículo para 
+          a(href='mailto:#{email}') #{email}

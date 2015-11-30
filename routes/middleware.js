@@ -14,7 +14,9 @@ exports.initLocals = function(req, res, next) {
     { label: 'Contato', href: '/#contato' }
   ];
 
+  locals.email = 'contato@mauroviottoadvogados.com.br';
   locals.user = req.user;
+
   next();
 };
 

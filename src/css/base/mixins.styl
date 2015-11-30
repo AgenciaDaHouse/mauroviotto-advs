@@ -1,10 +1,30 @@
 rem($value)
   return unit(($value / 16), 'rem')
 
-grid()
+grid($gutter = $gutter-size)
   display flex
-  margin-left $gutter-size * -1
+  margin-left $gutter * -1
 
-grid-cell($size = 1)
+grid-cell($size = 1, $gutter = $gutter-size)
   flex $size
-  padding-left $gutter-size
+  padding-left $gutter
+
+size()
+  if length(arguments) == 1
+    width arguments[0]
+    height arguments[0]
+  else
+    width arguments[0]
+    height arguments[1]
+
+triangle($color, $size = 36px)
+  border-left $size solid transparent
+  border-right @border-left
+  border-top $size solid $color
+  content ''
+  display block
+  left 50%
+  margin-left $size * -1
+  position absolute
+  top 0
+  size 0
