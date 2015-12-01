@@ -1,0 +1,19 @@
+mixin contact-form()
+  form.c-contact-form
+    legend.c-contact-form__heading Dúvidas ou Sugestões entre em contato, teremos o prazer em atendê-lo.
+
+    .c-contact-form__items
+      label.c-contact-form__item
+        p.c-contact-form__label Nome
+        input.c-contact-form__field(name='name', required)
+
+      label.c-contact-form__item
+        p.c-contact-form__label e-mail
+        input.c-contact-form__field(name='email', required)
+
+      label.c-contact-form__item
+        p.c-contact-form__label Mensagem
+        textarea.c-contact-form__field(name='message', required)
+
+    footer.c-contact-form__controls
+      button.c-contact-form__button Enviar

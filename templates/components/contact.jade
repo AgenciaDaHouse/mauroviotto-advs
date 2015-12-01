@@ -1,4 +1,14 @@
+//- dependencies
+include ./contact-form
+
 mixin contact()
   section.c-contact
     .h-limiter
       h2.u-type-heading.u-type-heading--main Contato
+
+      .c-contact__items
+        .c-contact__item.c-contact__item--short
+          +contact-form()
+
+        .c-contact__item
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis vero blanditiis aspernatur possimus ullam ex? Pariatur odio, voluptas delectus quibusdam, ad, placeat magnam earum magni, deleniti consequatur quae esse ullam!

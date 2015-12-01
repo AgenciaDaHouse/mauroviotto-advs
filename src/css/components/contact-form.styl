@@ -1,0 +1,44 @@
+.c-contact-form
+  border-right 1px solid $white
+  padding-right 1.5rem
+
+  &__heading
+    font-size rem(14)
+    margin-bottom 1.25rem
+
+  &__label
+    font-weight 700
+    margin-bottom 0.5rem
+
+  &__field
+    background $white
+    border none
+    color $dark-gray
+    padding 0.5rem
+    width 100%
+
+    textarea&
+      height 8rem
+      resize vertical
+
+  &__button
+    background none
+    border none
+    color $white
+    display inline-block
+    text-transform uppercase
+
+  &__items
+    grid($gutter-size)
+    flex-wrap wrap
+
+  &__item
+    grid-cell()
+    display block
+    margin-bottom 1rem
+
+    &:last-child
+      grid-cell(0 0 100%)
+
+  &__controls
+    text-align right

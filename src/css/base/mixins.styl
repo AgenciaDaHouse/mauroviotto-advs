@@ -1,13 +1,19 @@
 rem($value)
   return unit(($value / 16), 'rem')
 
-grid($gutter = $gutter-size)
+grid($gutter = $gutter-size, $vertical-gutter = false)
   display flex
   margin-left $gutter * -1
 
-grid-cell($size = 1, $gutter = $gutter-size)
+  if $vertical-gutter
+    margin-top $gutter * -1
+
+grid-cell($size = 1, $gutter = $gutter-size, $vertical-gutter = false)
   flex $size
   padding-left $gutter
+
+  if $vertical-gutter
+    padding-top $gutter
 
 size()
   if length(arguments) == 1
