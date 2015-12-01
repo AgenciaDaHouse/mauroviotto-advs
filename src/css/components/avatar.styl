@@ -1,11 +1,19 @@
 .c-avatar
   text-align center
 
+  &--inline
+    align-items center
+    display flex
+
   &__image
     border-radius 50%
     display block
     margin auto
-    size(rem(165))
+    size rem(165)
+
+    &--small
+      margin 0 1.5rem 0 0
+      size rem(80)
 
   &__heading
     margin 2rem 0

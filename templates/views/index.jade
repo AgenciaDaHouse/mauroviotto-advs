@@ -4,8 +4,10 @@ extends ../layouts/default
 //- dependencies
 include ../components/about
 include ../components/banner
+include ../components/contact
 include ../components/footer
 include ../components/header
+include ../components/services
 include ../components/team
 
 //- markup
@@ -17,5 +19,7 @@ block content
       +banner()
       +about()
       +team()
+      +services()
+      +contact()
 
     +footer()

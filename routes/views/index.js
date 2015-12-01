@@ -15,6 +15,7 @@ exports = module.exports = function (req, res) {
     async.parallel({
       abouts: function (next) { getModel('About', next); },
       roles: function (next) { getModel('Role', next); },
+      services: function (next) { getModel('Service', next); },
       members: function (next) { getModel('Member', next); }
     }, function (err, results) {
       if (err) throw new Error(err);
@@ -23,6 +24,7 @@ exports = module.exports = function (req, res) {
       locals.abouts = results.abouts;
       locals.roles = _.indexBy(results.roles, 'key');
       locals.members = _.groupBy(results.members, 'role');
+      locals.services = results.services;
 
       next();
     });

@@ -1,0 +1,17 @@
+//- dependencies
+include ./avatar
+
+mixin services()
+  section.c-services
+    .h-limiter
+      h2.u-type-heading.u-type-heading--main Áreas de Atuação
+      ul.c-services__items
+        each item in services
+          li.c-services__item
+            header.c-services__header
+              +avatar(item, { main: 'inline', image: 'small' })
+              p.c-services__info Desde #{item.startedAt}.
+            p.c-services__description #{item.info}
+
+        li.c-services__item
+          img.c-services__banner(src='/img/simple-banner.png', alt='Mauro Viotto Advogados Associados - Tradição, Experiência e Inovação')

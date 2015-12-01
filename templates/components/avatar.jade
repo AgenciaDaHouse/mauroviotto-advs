@@ -1,4 +1,5 @@
-mixin avatar(data)
-  .c-avatar
-    img.c-avatar__image(src=data.picture.url)
-    h3.c-avatar__heading #{data.name}
+mixin avatar(data, modifier)
+  - m = modifier || {}
+  .c-avatar(class=m.main ? 'c-avatar--#{m.main}' : '')
+    img.c-avatar__image(src=data.picture.url, class=m.image ? 'c-avatar__image--#{m.image}' : '')
+    h3.c-avatar__heading(class=m.heading ? 'c-avatar__heading--#{m.heading}' : '') #{data.name}

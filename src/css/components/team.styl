@@ -8,6 +8,15 @@
   &:before
     triangle($dark-gray)
 
+  &:after
+    $height = 2.25rem
+    background-image linear-gradient(to bottom, rgba(0,0,0,0.325), rgba(0,0,0,0))
+    bottom $height * -1
+    content ''
+    left 0
+    position absolute
+    size 100% $height
+
   &__items
     grid($gutter-size * 6)
     margin-bottom 4rem
