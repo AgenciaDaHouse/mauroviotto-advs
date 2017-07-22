@@ -8,6 +8,7 @@ var config = require('./config');
 keystone.init({
   'name': config.APP_NAME,
   'brand': config.APP_NAME,
+  'port': process.env.PORT || config.APP_PORT,
 
   'static': 'public',
   'favicon': 'public/favicon.ico',
