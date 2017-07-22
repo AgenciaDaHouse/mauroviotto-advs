@@ -28,7 +28,8 @@
   },
   "scripts": {
     "start": "node keystone.js",
-    "serve": "gulp"
+    "serve": "gulp",
+    "postinstall": "gulp build"
   },
   "main": "keystone.js"
 }
