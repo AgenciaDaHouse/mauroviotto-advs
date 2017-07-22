@@ -23,7 +23,7 @@ keystone.init({
 
   'cookie secret': '=Hw1WfV6XlGW(w~K8=&5r%U2]EZ',
 
-  'mongo': process.env.MONGOLAB_URI || 'mongodb://localhost/auroviotto-advs'
+  'mongo': process.env.MONGODB_URI || 'mongodb://localhost/auroviotto-advs'
 });
 
 keystone.import('models');
