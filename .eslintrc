@@ -1,0 +1,14 @@
+env:
+  node: true
+  browser: true
+
+rules:
+  quotes: [2, "single"]
+  semi: [2, "never"]
+  no-multi-spaces: 2
+
+ecmaFeatures:
+  blockBindings: true
+
+globals:
+  $: true

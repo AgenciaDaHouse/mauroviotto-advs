@@ -1,3 +1,9 @@
 {
-  "APP_NAME": "Mauro Viotto Advogados"
+  "APP_NAME": "Mauro Viotto Advogados",
+  "APP_PORT": 4000,
+
+  "SRC_PATH": "./src",
+  "DIST_PATH": "./public",
+
+  "GA_CODE": "UA-"
 }

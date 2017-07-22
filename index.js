@@ -21,7 +21,9 @@ keystone.init({
   'auth': true,
   'user model': 'User',
 
-  'cookie secret': '=Hw1WfV6XlGW(w~K8=&5r%U2]EZ'
+  'cookie secret': '=Hw1WfV6XlGW(w~K8=&5r%U2]EZ',
+
+  'mongo': process.env.MONGOLAB_URI || 'mongodb://localhost/auroviotto-advs'
 });
 
 keystone.import('models');
